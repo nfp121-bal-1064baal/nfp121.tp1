@@ -6,6 +6,7 @@ import question1.Circle;
 import question1.Square;
 import question1.Triangle;
 
+
 /**
  * This class represents a simple picture. You can draw the picture using the
  * draw method. But wait, there's more: being an electronic picture, it can be
@@ -24,6 +25,7 @@ public class Picture {
     private Circle sun,yellowSun;
     
     private static int disatnceMoved;
+    private boolean terreFixe=true;
 
     /**
      * Constructor for objects of class Picture
@@ -103,6 +105,10 @@ public class Picture {
     
     
     public void coucher(){
+        
+        if(terreFixe)
+        {
+            
         disatnceMoved = 200;
         Timer t= new Timer(50, new ActionListener(){
             public void actionPerformed(ActionEvent e) {
@@ -119,5 +125,5 @@ public class Picture {
         t.setInitialDelay(0);
         t.start();
     }
-
+}
 }
